@@ -6,7 +6,7 @@ class MP3Importer
   end
 
   def files
-    Dir[@path].select{ |f| File.file? f }.map{ |f| File.basename f }
+    Dir.entries(@path).select{ |f| File.file? f }
   end
 
   def import
