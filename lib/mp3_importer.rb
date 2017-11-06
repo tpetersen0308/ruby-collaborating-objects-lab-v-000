@@ -11,6 +11,7 @@ class MP3Importer
   def files
     #Dir[@path].select{ |f| File.file? f }.map{ |f| File.basename f }
     @files = Dir[@path]
+    binding.pry
   end
 
   def import
