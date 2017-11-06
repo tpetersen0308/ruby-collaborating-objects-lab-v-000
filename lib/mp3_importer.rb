@@ -9,8 +9,9 @@ class MP3Importer
   end
 
   def files
-    Dir[@path].each { |filename| @files << filename }
-    binding.pry
+    #Dir[@path].each { |filename| @files << filename }
+    Dir[@path].select{ |f| File.file? f }.map{ |f| File.basename f }
+    #binding.pry
   end
 
   def import
