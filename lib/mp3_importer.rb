@@ -8,7 +8,7 @@ class MP3Importer
   end
 
   def files
-    @files = Dir[@path]
+    @files = Dir[@path].select{ |f| File.file? f }
     binding.pry
   end
 
