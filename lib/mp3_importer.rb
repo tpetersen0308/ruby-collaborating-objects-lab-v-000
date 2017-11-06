@@ -1,5 +1,3 @@
-require "pry"
-
 class MP3Importer
   attr_accessor :path, :files
 
@@ -15,7 +13,5 @@ class MP3Importer
   def import
     self.files.each { |file| Song.new_by_filename(file) }
   end
-
-  binding.pry
 
 end
