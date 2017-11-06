@@ -8,7 +8,7 @@ class MP3Importer
   end
 
   def files
-    @files = Dir[@path].select{ |f| File.file? f }
+    Dir[@path].each { |filename| @files << filename }
     binding.pry
   end
 
